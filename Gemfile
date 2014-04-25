@@ -46,3 +46,5 @@ end
 
 gem 'rspec-rails'
 gem 'capybara'
+
+gem 'bootstrap-sass'
