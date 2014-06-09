@@ -48,3 +48,7 @@ gem 'rspec-rails'
 gem 'capybara'
 
 gem 'bootstrap-sass'
+
+group :test do
+  gem 'factory_girl_rails'
+end
