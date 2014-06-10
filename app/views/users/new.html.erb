@@ -1,17 +1,33 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<%= form_for(@user) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_for @user, html: { role: "form" } do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name,
+                     class: "form-control",
+               placeholder: "Enter your name" %>
+  </div>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email,
+                     class: "form-control",
+               placeholder: "Enter your email" %>
+  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password,
+                         class: "form-control",
+                   placeholder: "Enter your password" %>
+  </div>
 
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.password_field :password_confirmation %>
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation,
+                         class: "form-control",
+                   placeholder: "Confirm your password" %>
+  </div>
 
   <%= f.submit "Create my account", class: "btn btn-lg btn-primary" %>
 <% end %>
